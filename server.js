@@ -15,6 +15,10 @@ app.get('/article-one', function (req, res) {
   res.send('Article one');
 });
 
+app.get("/article-two",function(req,res){
+    res.send('Article Two');
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
