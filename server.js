@@ -56,6 +56,9 @@ var articleTwo = {
 function createTemplateTwo(data)
 {
     var title = data.title;
+    var heading;
+    var date;
+    var content;
     var htmlTemplateTwo = `<!doctype html>
 <html>
     <head>
