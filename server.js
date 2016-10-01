@@ -24,7 +24,7 @@ var htmlTemplate = `<!doctype html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>${title}</title>
       <link href="ui/style.css" rel="stylesheet"/>
     </head>
     <body>
@@ -33,10 +33,11 @@ var htmlTemplate = `<!doctype html>
                 <a href="/">Home</a>
             </div>
             <hr/>
-            <h3>Article One</h3>
+            <h3>${heading}</h3>
             <div>
-              Sep 5 .2016
+              ${date}
             </div>
+            ${content}
              <div>
              $content{}
             </div>
@@ -44,7 +45,7 @@ var htmlTemplate = `<!doctype html>
     </body>
 </html>
 `;
-
+return htmlTemplat;
 }
 
 
