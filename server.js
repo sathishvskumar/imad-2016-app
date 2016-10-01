@@ -6,16 +6,16 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    articleone:{title:'Article-One',
+    'article-one':{title:'Article-One',
     heading:'Article-One',
     date:'Sep 5 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
         Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>`},
-   articleTwo:{title:'Article-One',
+   'article-two':{title:'Article-One',
     heading:'Article-Two',
     date:'Sep 5 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>`},
-    articleThree:{title:'Article-One',
+    'article-three':{title:'Article-One',
     heading:'Article-Three',
     date:'Sep 5 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>`}
@@ -57,50 +57,15 @@ var htmlTemplate = `<!doctype html>
 return htmlTemplate;
 }
 
-var articleTwo = {
-    title:'Article - Two'
-};
-
-function createTemplateTwo(data)
-{
-    var title = data.title;
-    var heading;
-    var date;
-    var content;
-    var htmlTemplateTwo = `<!doctype html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${title}</title>
-      <link href="ui/style.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <a href="/">Home</a>
-            </div>
-            <hr/>
-            <h1>${heading}</h1>
-            <h3>${heading}</h3>
-            <div>
-              ${date}
-            </div>
-            ${content}
-             <div>
-            </div>
-        </div>
-    </body>
-</html>
-`;
-return htmlTemplateTwo;
-}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
-app.get('/article-one', function (req, res) {
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+    
    res.send(createTemplate(articleOne));
 });
 
