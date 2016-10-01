@@ -33,6 +33,7 @@ var htmlTemplate = `<!doctype html>
                 <a href="/">Home</a>
             </div>
             <hr/>
+            <h1>${heading}</h1>
             <h3>${heading}</h3>
             <div>
               ${date}
