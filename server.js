@@ -49,7 +49,41 @@ var htmlTemplate = `<!doctype html>
 return htmlTemplate;
 }
 
+var articleTwo = {
+    title:'Article - Two'
+};
 
+function createTemplateTwo(data)
+{
+    var title = data.title;
+    var htmlTemplateTwo = `<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>${title}</title>
+      <link href="ui/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+            <h1>${heading}</h1>
+            <h3>${heading}</h3>
+            <div>
+              ${date}
+            </div>
+            ${content}
+             <div>
+             $content{}
+            </div>
+        </div>
+    </body>
+</html>
+`;
+return htmlTemplateTwo;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -61,7 +95,7 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get("/article-two",function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article-two.html'));
+    res.send(createArticleTwo(articleTwo));
 });
 app.get("/article-three",function(req,res){
     res.sendFile(path.join(__dirname,'ui','article-three.html'));
