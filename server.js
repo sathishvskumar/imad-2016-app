@@ -79,7 +79,6 @@ function createTemplateTwo(data)
             </div>
             ${content}
              <div>
-             $content{}
             </div>
         </div>
     </body>
