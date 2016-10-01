@@ -12,12 +12,19 @@ var articleOne = {
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>
         Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.`
 };
+function createTemplate(data)
+{
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
 
 var htmlTemplate = `<!doctype html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Article - One</title>
+        <title></title>
       <link href="ui/style.css" rel="stylesheet"/>
     </head>
     <body>
@@ -31,24 +38,14 @@ var htmlTemplate = `<!doctype html>
               Sep 5 .2016
             </div>
              <div>
-             <p>
-                 This is the content for my first article
-             </p>
-              <p>
-                Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
-
-             </p>
-             <p>
-                Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
-
-             </p>
+             $content{}
             </div>
         </div>
     </body>
 </html>
 `;
 
-
+}
 
 
 app.get('/', function (req, res) {
