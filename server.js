@@ -46,7 +46,7 @@ var htmlTemplate = `<!doctype html>
     </body>
 </html>
 `;
-return htmlTemplat;
+return htmlTemplate;
 }
 
 
