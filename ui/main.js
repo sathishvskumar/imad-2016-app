@@ -34,3 +34,15 @@ button.onclick = function()
     
 };
 
+//Submit 
+
+var submit = document.getElementById('submit_button');
+var inputText = document.getElementById('name');
+var names = inputText.value;
+submit.onclick=funtion()
+{
+    
+}
+
+
+
