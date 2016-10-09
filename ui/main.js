@@ -20,6 +20,9 @@ button.onclick = function()
     request.onreadystatechange = function()
     {
         if(request.readyState===XML)
+        {
+            
+        }
     };
     counter = counter + 1;
     count.innerHTML = counter.toString();
