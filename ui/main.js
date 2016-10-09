@@ -16,6 +16,11 @@ var count = document.getElementById('count');
 var counter=0;
 button.onclick = function()
 {
+    var request = XMLHttpRequest();
+    request.onreadystatechange = function()
+    {
+        if(request.readyState===XML)
+    };
     counter = counter + 1;
     count.innerHTML = counter.toString();
 };
