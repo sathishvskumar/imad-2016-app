@@ -39,18 +39,16 @@ button.onclick = function()
 var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
-    
     var inputText = document.getElementById('name');
-    var ul = document.getElementById('namesList');
-    var names = inputText.value;
-     var namesList  =['name1','name2','name3'];
-     var namesValue='';
-      for(var i=0;i<namesList.Length;i++)
+    var name = inputText.value;
+     var names  =['name1','name2','name3'];
+     var list='';
+      for(var i=0;i<names.Length;i++)
       {
-          namesValue += '<li>' + namesList[i] + '</li>';
+          list += '<li>' + names[i] + '</li>';
       }
-      
-      ul.innerHTML=namesValue;
+    var ul = document.getElementById('namesList');  
+      ul.innerHTML=list;
 };
 
 
