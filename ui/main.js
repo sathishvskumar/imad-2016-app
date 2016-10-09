@@ -36,10 +36,11 @@ button.onclick = function()
 
 //Submit 
 
-var submit = document.getElementById('submit_button');
+
 var inputText = document.getElementById('name');
 var names = inputText.value;
 console.log(names);
+var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
     console.log('onclick');
