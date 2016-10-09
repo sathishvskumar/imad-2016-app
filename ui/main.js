@@ -39,7 +39,7 @@ button.onclick = function()
 var submit = document.getElementById('submit_button');
 var inputText = document.getElementById('name');
 var names = inputText.value;
-var namesList[];
+var namesList;
 var namesValue='';
 submit.onclick=function()
 {
