@@ -19,12 +19,17 @@ button.onclick = function()
     var request = XMLHttpRequest();
     request.onreadystatechange = function()
     {
-        if(request.readyState===XML)
+        if(request.readyState===XMLHttpRequest.DONE)
         {
-            
+          if(request.status===200)
+        {
+            var counter = request.responseText;
+            count.innerHTML = counter.toString();
+        }  
         }
     };
-    counter = counter + 1;
-    count.innerHTML = counter.toString();
+    //counter = counter + 1;
+    request.open('GET','http://sathishvskumar.imad.hasura-app.io/counte/');
+    
 };
 
