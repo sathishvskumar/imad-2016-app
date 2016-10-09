@@ -39,11 +39,11 @@ button.onclick = function()
 var submit = document.getElementById('submit_button');
 var inputText = document.getElementById('name');
 var names = inputText.value;
-var namesValue='';
+
 submit.onclick = function()
 {
-    console.log(names);
- var namesList  =['name1','name2','name3'];
+     var namesList  =['name1','name2','name3'];
+     var namesValue='';
   for(var i=0;i<namesList.Length;i++)
   {
       namesValue += '<li>'+namesList[i]+'<li>';
