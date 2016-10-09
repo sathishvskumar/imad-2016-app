@@ -47,11 +47,11 @@ console.log(names);
     console.log('onclick');
      var namesList  =['name1','name2','name3'];
      var namesValue='';
-  for(var i=0;i<namesList.Length-1;i++)
+  for(var i=0;i<namesList.Length;i++)
   {
       namesValue += '<li>' + namesList[i] + '</li>';
   }
-  console.log(namesList[0]);
+  console.log(namesValue.count.toString());
   var ul = document.getElementById('namesList');
   ul.innerHTML=namesValue;
 };
