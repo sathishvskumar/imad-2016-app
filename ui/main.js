@@ -29,7 +29,7 @@ button.onclick = function()
         }
     };
     //counter = counter + 1;
-    request.open('GET','http://sathishvskumar.imad.hasura-app.io/counte/');
+    request.open('GET','http://sathishvskumar.imad.hasura-app.io/counter');
     
 };
 
