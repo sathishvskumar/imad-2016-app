@@ -39,9 +39,10 @@ button.onclick = function()
 var submit = document.getElementById('submit_button');
 var inputText = document.getElementById('name');
 var names = inputText.value;
-
+console.log(names);
 submit.onclick = function()
 {
+    console.log('onclick');
      var namesList  =['name1','name2','name3'];
      var namesValue='';
   for(var i=0;i<namesList.Length;i++)
