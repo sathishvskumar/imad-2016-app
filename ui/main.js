@@ -49,7 +49,7 @@ console.log(names);
      var namesValue='';
   for(var i=0;i<namesList.Length;i++)
   {
-      namesValue += '<li>'+namesList[i]+'</li>';
+      namesValue += '<li>'+ namesList[i] + '</li>';
   }
   console.log(namesList[0]);
   var ul = document.getElementById('namesList');
