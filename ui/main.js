@@ -28,7 +28,7 @@ button.onclick = function()
         }  
         }
     };
-    //counter = counter + 1;
+    counter = counter + 1;
     request.open('GET','http://sathishvskumar.imad.hasura-app.io/counter',true);
     request.send(null);
     
