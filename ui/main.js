@@ -51,7 +51,7 @@ console.log(names);
   {
       namesValue += '<li>'+namesList[i]+'</li>';
   }
-  console.log(namesValue);
+  console.log(namesList[0]);
   var ul = document.getElementById('namesList');
   ul.innerHTML=namesValue;
 };
