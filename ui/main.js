@@ -43,17 +43,17 @@ var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
     var names = inputText.value;
-console.log(names);
+    console.log(names);
     console.log('onclick');
      var namesList  =['name1','name2','name3'];
      var namesValue='';
-  for(var i=0;i<namesList.Length;i++)
-  {
-      namesValue += '<li>' + namesList[i] + '</li>';
-  }
-  
-  var ul = document.getElementById('namesList');
-  ul.innerHTML=namesValue;
+      for(var i=0;i<namesList.Length;i++)
+      {
+          namesValue += '<li>' + namesList[i] + '</li>';
+      }
+      
+      var ul = document.getElementById('namesList');
+      ul.innerHTML=namesValue;
 };
 
 
