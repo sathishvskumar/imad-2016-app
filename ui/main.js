@@ -46,7 +46,7 @@ submit.onclick = function()
   namesList  =['name1','name2','name3'];
   for(var i=0;i<namesList.Length;i++)
   {
-      namesValue += '<li>'+namesValue[i]+'<li>';
+      namesValue += '<li>'+namesList[i]+'<li>';
   }
   console.log(namesValue);
   var ul = document.getElementById('namesList');
