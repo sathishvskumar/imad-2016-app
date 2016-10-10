@@ -47,6 +47,7 @@ submit.onclick = function()
      var list='';
       for(var i=0;i<names.Length;i++)
       {
+          console.log(names[i]);
           list += '<li>' + names[i] + '</li>';
       }
       console.log(list.toString());
