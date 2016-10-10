@@ -63,6 +63,7 @@ submit.onclick = function()
             var names = request.responseText;
             console.log(names);
             names = JSON.parse(names);
+            console.log(names);
              var list='';
               for(var i=0;i<names.length;i++)
               {
