@@ -69,6 +69,8 @@ submit.onclick = function()
               {
                   list += '<li>' + names[i] + '</li>';
               }
+              var ul = document.getElementById('namesList');  
+              ul.innerHTML=list;
             }  
         }
     };
