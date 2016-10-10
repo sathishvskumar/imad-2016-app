@@ -35,13 +35,11 @@ button.onclick = function()
 };
 
 //Submit 
-  var inputText = document.getElementById('name');
-  var name = inputText.value;
   
 var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
-    console.log('clicked');
+    /*console.log('clicked');--Old Code
      var names  =['name1','name2','name3','name4'];
      
      var list='';
@@ -51,7 +49,30 @@ submit.onclick = function()
       }
       
     var ul = document.getElementById('namesList');  
-      ul.innerHTML=list;
+      ul.innerHTML=list;*/
+       var inputText = document.getElementById('name');
+  var name = inputText.value;
+ 
+      var request = new XMLHttpRequest();
+    request.onreadystatechange = function()
+    {
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+          if(request.status===200)
+        {
+            var names = request.responseText;
+            names = JSON.parse(names);
+             var list='';
+              for(var i=0;i<names.length;i++)
+              {
+                  list += '<li>' + names[i] + '</li>';
+              }
+            }  
+        }
+    };
+    
+    request.open('GET','http://sathishvskumar.imad.hasura-app.io/submit-name?name='+name,true);
+    request.send(null);
 };
 
 
