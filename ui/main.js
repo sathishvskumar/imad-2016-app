@@ -35,13 +35,13 @@ button.onclick = function()
 };
 
 //Submit 
-
+  var inputText = document.getElementById('name');
+  var name = inputText.value;
+  
 var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
-    var inputText = document.getElementById('name');
-    var name = inputText.value;
-     var names  =['name1','name2','name3'];
+     var names  =['name1','name2','name3','name4'];
      var list='';
       for(var i=0;i<names.Length;i++)
       {
