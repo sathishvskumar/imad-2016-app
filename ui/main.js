@@ -43,14 +43,13 @@ submit.onclick = function()
 {
     console.log('clicked');
      var names  =['name1','name2','name3','name4'];
-     console.log(names);
+     
      var list='';
-      for(var i=0;i<names.Length;i++)
+      for(var i=0;i<names.length;i++)
       {
-          console.log(names[i]);
           list += '<li>' + names[i] + '</li>';
       }
-      console.log(list.toString());
+      
     var ul = document.getElementById('namesList');  
       ul.innerHTML=list;
 };
