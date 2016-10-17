@@ -46,9 +46,8 @@ var htmlTemplate = `<!doctype html>
             <div>
               ${date}
             </div>
-            ${content}
              <div>
-             $content{}
+            ${content}
             </div>
         </div>
     </body>
