@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var articles = {
     'article-one':{title:'Article-One',
     heading:'Article-One',
-    date:'Sep 5 2016',
+    date:'Sep 01 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
         Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>`},
    'article-two':{title:'Article-One',
