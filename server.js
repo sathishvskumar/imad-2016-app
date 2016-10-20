@@ -18,7 +18,7 @@ var articles = {
     'article-three':{title:'Article-Three',
     heading:'Article-Three',
     date:'Sep 10 2016',
-    content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p><hr/> <input type="text" value="Comments"></input><input type="submit" value="Submit"></input>`}
+    content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p><hr/> <input type="text" placeholder="Comments"></input>&nbsp;<input type="submit" value="Submit"></input><br/><input type="textarea"></input>`}
 };
 function createTemplate(data)
 {
