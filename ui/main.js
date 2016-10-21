@@ -93,16 +93,14 @@ submit.onclick = function()
             {
               if(request.status===200)
             {
-                var names = request.responseText;
-                console.log(names);
-                names = JSON.parse(names);
-                console.log(names);
-                 var list='';
+                var comments = request.responseText;
+                comments = JSON.parse(comments);
+                var list='';
                   for(var i=0;i<names.length;i++)
                   {
                       list += '<li>' + names[i] + '</li>';
                   }
-                  var ul = document.getElementById('namesList');  
+                  var ul = document.getElementById('comments');  
                   ul.innerHTML=list;
                 }  
             }
