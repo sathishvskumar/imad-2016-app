@@ -79,5 +79,41 @@ submit.onclick = function()
     request.send(null);
 };
 
+//Comments
+    var submit_comment = document.getElementById('submit_comment');
+    submit_commnet.onclick = function()
+    {
+        var commentText = document.getElementById('comment');
+        var comment = commentText.value;
+      
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function()
+        {
+            if(request.readyState===XMLHttpRequest.DONE)
+            {
+              if(request.status===200)
+            {
+                var names = request.responseText;
+                console.log(names);
+                names = JSON.parse(names);
+                console.log(names);
+                 var list='';
+                  for(var i=0;i<names.length;i++)
+                  {
+                      list += '<li>' + names[i] + '</li>';
+                  }
+                  var ul = document.getElementById('namesList');  
+                  ul.innerHTML=list;
+                }  
+            }
+        };
+        
+        request.open('GET','http://sathishvskumar.imad.hasura-app.io/submit-name?name='+name,true);
+        request.send(null);
+  };
+
+
+
+
 
 
