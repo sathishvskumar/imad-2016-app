@@ -56,6 +56,11 @@ var htmlTemplate = `<!doctype html>
 return htmlTemplate;
 }
 
+app.get('/',function(req,res)
+{
+   res.send('Hello sir') ;
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
