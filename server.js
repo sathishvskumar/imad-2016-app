@@ -77,9 +77,15 @@ app.get('/', function (req, res) {
 app.get('/articledata',function(req,res)
 {
     //get  data from article table
-    pool.query(SELECT * FROM article',function(err,result)
+    pool.query('SELECT * FROM article',function(err,result)
     {
-        
+        if(err)
+        {
+        }
+        else
+        {
+            
+        }
     });
 });
 app.get("/profile",function(req,res){
