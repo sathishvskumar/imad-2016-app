@@ -31,6 +31,7 @@ var articles = {
     date:'Sep 10 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p><hr/> <input id="comment" type="text" placeholder="Comments" maxlength="100" size="40"></input>&nbsp;<input type="submit" id="submit" value="Submit"><br/></input><br/><textarea id="comments" name="comment" cols="50" rows="7"></textarea>`}
 };
+
 function createTemplate(data)
 {
     var title = data.title;
@@ -89,6 +90,7 @@ app.get('/articledata',function(req,res)
         }
     });
 });
+
 app.get("/profile",function(req,res){
     res.sendFile(path.join(__dirname,'ui','profile.html'));
     
@@ -111,6 +113,7 @@ app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
     
 });
+
 var names=[];
 app.get('/submit-name',function(req,res)
 {
@@ -118,6 +121,7 @@ app.get('/submit-name',function(req,res)
     names.push(name);
     res.send(JSON.stringify(names));
 });
+
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));
