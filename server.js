@@ -14,8 +14,6 @@ var config={
     password:process.env.DB_PASSWORD
 };
 
-var pool = new Pool(config);
-
 var articles = {
     'article-one':{title:'Article-One',
     heading:'Article-One',
@@ -71,6 +69,9 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var pool = new Pool(config);
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
