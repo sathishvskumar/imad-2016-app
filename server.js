@@ -9,19 +9,9 @@ var config={
     host:'db.imad.hasura-app.io',
     port:'5432',
     password:process.env.DB_PASSWORD,
-     max: 10, // max number of clients in the pool
-   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+    max: 10, // max number of clients in the pool
+    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
-
-// var config = {
-//   user: 'sathishvskumar', //env var: PGUSER
-//   database: 'sathishvskumar', //env var: PGDATABASE
-//   password: 'db-sathishvskumar-47722', //env var: PGPASSWORD
-//   host: 'db.imad.hasura-app.io', // Server hosting the postgres database
-//   port: 5432, //env var: PGPORT
-//   max: 10, // max number of clients in the pool
-//   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-// };
 
 var app = express();
 app.use(morgan('combined'));
@@ -83,10 +73,10 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/test-db',function(req,res)
+app.get('/articledata',function(req,res)
 {
     //get  data from article table
-    pool.query('SELECT * FROM test',function(err,result)
+    pool.query('SELECT * FROM article',function(err,result)
     {
         if(err)
         {
