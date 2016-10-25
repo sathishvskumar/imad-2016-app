@@ -82,7 +82,7 @@ app.get('/articles/:articleName',function(req,res)
     {
         if(err)
         {
-            //res.result(500).send(err.toString());
+            res.result(500).send(err.toString());
         }
         else
         {
