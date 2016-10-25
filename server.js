@@ -78,6 +78,7 @@ app.get('/articles/:articleName',function(req,res)
     //var articleName = req.params.articleName;
     //get  data from article table
     console.log('started');
+    res.send('Hello');
     // pool.query("SELECT * FROM articles WHERE title ='"+req.params.articleName +"'" ,function(err,result)
     // {
     //     if(err)
