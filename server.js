@@ -9,7 +9,7 @@ var config={
     port:5432,
     database:'sathishvskumar',
     user:'sathishvskumar',
-    password:'db-sathishvskumar-47722'
+    password:process.env.DB_PASSWORD
 };
 
 var app = express();
