@@ -78,28 +78,28 @@ app.get('/articles/:articleName',function(req,res)
     //var articleName = req.params.articleName;
     //get  data from article table
    
-    // pool.query("SELECT * FROM articles WHERE title ='"+req.params.articleName +"'" ,function(err,result)
-    // {
-    //     if(err)
-    //     {
-    //         res.result(500).send(err.toString());
-    //     }
-    //     else
-    //     {
-    //         if(result.rows.length===0)
-    //         {
-    //             res.result(404).send('Article not found');
-    //         }else
-    //         {
-    //             res.send(result.row[0]);
+    pool.query("SELECT * FROM articles WHERE title ='"+req.params.articleName +"'" ,function(err,result)
+    {
+        if(err)
+        {
+            //res.result(500).send(err.toString());
+        }
+        else
+        {
+            if(result.rows.length===0)
+            {
+                //res.result(404).send('Article not found');
+            }else
+            {
+                //res.send(result.row[0]);
                 
-    //          //var articleData = result.rows[0];   
+             //var articleData = result.rows[0];   
              
-    //          //res.send(createTemplate(articles[articleName]));
-    //         }
-    //         //res.send(JSON.stringify(result.rows));
-    //     }
-    // });
+             //res.send(createTemplate(articles[articleName]));
+            }
+            //res.send(JSON.stringify(result.rows));
+        }
+    });
     res.send('Hello');
 });
 
