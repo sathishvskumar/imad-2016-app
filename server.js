@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var require
-var Pool = require('pg').Pool;
+var pg = require('pg');
 //password:'db-sathishvskumar-47722',
 //host:'db.imad.hasura-app.io',
 // var config={
@@ -25,6 +25,8 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+
+var pool = new pg.Pool(config);
 
 var articles = {
     'article-one':{title:'Article-One',
@@ -82,7 +84,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool = new Pool(config);
+
 app.get('/test-db',function(req,res)
 {
     //get  data from article table
