@@ -75,10 +75,10 @@ app.get('/', function (req, res) {
 var pool = new Pool(config);
 app.get('/articles/:articleName',function(req,res)
 {
-    //var articleName = req.params.articleName;
+    var articleName = req.params.articleName;
     //get  data from article table
-   res.send(req.params.articleName);
-    pool.query("SELECT * FROM articles where title ='"+req.params.articleName +"'" ,function(err,result)
+   
+    pool.query("SELECT * FROM articles where title ='"+ articleName +"'" ,function(err,result)
     {
         if(err)
         {
