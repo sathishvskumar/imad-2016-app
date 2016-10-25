@@ -4,23 +4,23 @@ var path = require('path');
 var pg = require('pg');
 //password:'db-sathishvskumar-47722',
 //host:'db.imad.hasura-app.io',
-// var config={
-//     user:'sathishvskumar',
-//     database:'sathishvskumar',
-//     host:'db.imad.hasura-app.io',
-//     port:'5432',
-//     password:process.env.DB_PASSWORD
-// };
-
-var config = {
-  user: 'sathishvskumar', //env var: PGUSER
-  database: 'sathishvskumar', //env var: PGDATABASE
-  password: 'db-sathishvskumar-47722', //env var: PGPASSWORD
-  host: 'db.imad.hasura-app.io', // Server hosting the postgres database
-  port: 5432, //env var: PGPORT
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+var config={
+    user:'sathishvskumar',
+    database:'sathishvskumar',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
 };
+
+// var config = {
+//   user: 'sathishvskumar', //env var: PGUSER
+//   database: 'sathishvskumar', //env var: PGDATABASE
+//   password: 'db-sathishvskumar-47722', //env var: PGPASSWORD
+//   host: 'db.imad.hasura-app.io', // Server hosting the postgres database
+//   port: 5432, //env var: PGPORT
+//   max: 10, // max number of clients in the pool
+//   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+// };
 
 var app = express();
 app.use(morgan('combined'));
