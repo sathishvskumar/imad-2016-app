@@ -77,7 +77,7 @@ var pool = new Pool(config);
 app.get('/test-db',function(req,res)
 {
     //get  data from article table
-    pool.query('SELECT * FROM article',function(err,result)
+    pool.query('SELECT * FROM test',function(err,result)
     {
         if(err)
         {
