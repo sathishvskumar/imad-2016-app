@@ -73,7 +73,7 @@ app.get('/', function (req, res) {
 
 var pool = new Pool(config);
 
-app.get('/articledata',function(req,res)
+app.get('/test-db',function(req,res)
 {
     //get  data from article table
     pool.query('SELECT * FROM article',function(err,result)
