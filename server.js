@@ -77,6 +77,7 @@ app.get('/articles/:articleName',function(req,res)
 {
     //var articleName = req.params.articleName;
     //get  data from article table
+    console.log('started');
     pool.query("SELECT * FROM articles WHERE title ='"+req.params.articleName +"'" ,function(err,result)
     {
         if(err)
@@ -90,7 +91,9 @@ app.get('/articles/:articleName',function(req,res)
                 res.result(404).send('Article not found');
             }else
             {
+                
              var articleData = result.rows[0];   
+             console.log(articleData);
              res.send(createTemplate(articles[articleName]));
             }
             //res.send(JSON.stringify(result.rows));
