@@ -8,7 +8,9 @@ var config={
     database:'sathishvskumar',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:process.env.DB_PASSWORD
+    password:process.env.DB_PASSWORD,
+     max: 10, // max number of clients in the pool
+   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
 
 // var config = {
