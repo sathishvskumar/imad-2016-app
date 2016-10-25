@@ -93,7 +93,7 @@ app.get('/articles/:articleName',function(req,res)
             {
                 
              var articleData = result.rows[0];   
-             console.log(articleData);
+             
              res.send(createTemplate(articles[articleName]));
             }
             //res.send(JSON.stringify(result.rows));
