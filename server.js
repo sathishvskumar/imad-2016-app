@@ -73,18 +73,27 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/articledata',function(req,res)
+app.get('/articles/:articleName',function(req,res)
 {
+    //var articleName = req.params.articleName;
     //get  data from article table
-    pool.query('SELECT * FROM article',function(err,result)
+    pool.query("SELECT * FROM article WHERE title ='"+req.params.articleName +"'" ,function(err,result)
     {
         if(err)
         {
-            res.send(500).send(err.toString());
+            res.result(500).send(err.toString());
         }
         else
         {
-            res.send(JSON.stringify(result.rows));
+            if(result.rows.length===0)
+            {
+                res.result(404).send('Article not found');
+            }else
+            {
+             var articleData = result.rows[0];   
+             res.send(createTemplate(articles[articleName]));
+            }
+            //res.send(JSON.stringify(result.rows));
         }
     });
 });
