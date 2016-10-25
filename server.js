@@ -1,7 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var require
 var pg = require('pg');
 //password:'db-sathishvskumar-47722',
 //host:'db.imad.hasura-app.io',
