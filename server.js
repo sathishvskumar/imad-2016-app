@@ -73,10 +73,6 @@ app.get('/', function (req, res) {
 
 var pool = new Pool(config);
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
-
 app.get('/articledata',function(req,res)
 {
     //get  data from article table
