@@ -90,18 +90,15 @@ app.get('/articles/:articleName',function(req,res)
             {
                 res.result(404).send('Article not found');
             }else
-            {
-                //res.send(result.row[0]);
-                
+            {   
              var articleData = result.rows[0];   
              
              res.send(createTemplate(articles[articleName]));
             }
-            //res.send(JSON.stringify(result.rows));
         }
-        //res.send('Hello inside');
+        
     });
-    //res.send('Hello');
+    
 });
 
 app.get('/profile',function(req,res){
