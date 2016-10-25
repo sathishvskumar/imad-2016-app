@@ -5,12 +5,22 @@ var require
 var Pool = require('pg').Pool;
 //password:'db-sathishvskumar-47722',
 //host:'db.imad.hasura-app.io',
-var config={
-    host:'db.imad.hasura-app.io',
-    port:'5432',
-    user:'sathishvskumar',
-    password:process.env.DB_PASSWORD,
-    database:'sathishvskumar'
+// var config={
+//     user:'sathishvskumar',
+//     database:'sathishvskumar',
+//     host:'db.imad.hasura-app.io',
+//     port:'5432',
+//     password:process.env.DB_PASSWORD
+// };
+
+var config = {
+  user: 'sathishvskumar', //env var: PGUSER
+  database: 'sathishvskumar', //env var: PGDATABASE
+  password: 'db-sathishvskumar-47722', //env var: PGPASSWORD
+  host: 'localhost', // Server hosting the postgres database
+  port: 5432, //env var: PGPORT
+  max: 10, // max number of clients in the pool
+  idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
 
 var app = express();
@@ -73,7 +83,6 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-
 app.get('/test-db',function(req,res)
 {
     //get  data from article table
