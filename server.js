@@ -78,7 +78,7 @@ app.get('/articles/:articleName',function(req,res)
     var articleName = req.params.articleName;
     //get  data from article table
    
-    pool.query("SELECT * FROM articles where title ='"+ articleName +"'" ,function(err,result)
+    pool.query("SELECT * FROM articles where title =$1",[req.params.articleName] ,function(err,result)
     {
         if(err)
         {
