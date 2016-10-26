@@ -21,7 +21,7 @@ var articles = {
     heading:'Article-One',
     date:'Sep 01 2016',
     content:`<p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
-        Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>`},
+        Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this,<b>Hello</b> browsers on those devices scaled down the entire web page to fit the screen.</p>`},
    'article-two':{title:'Article-Two',
     heading:'Article-Two',
     date:'Sep 7 2016',
